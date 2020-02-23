@@ -1,0 +1,16 @@
+pip3 install sqlalchemy
+
+# Optional, for MySQL/MariaDB support
+pip3 install mysql-connector-python
+
+mysql -e "create database pydemo"
+cat mkpres.sql | mysql pydemo
+python3 mkpres.py | mysql pydemo 
+
+
+
+
+
+
+
+

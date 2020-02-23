@@ -1,0 +1,57 @@
+Mike Harley
+mharley@pclink.com
+
+Cython
+
+Mark Lutz --	Learning python
+Mark Lutz -- 	Proramming Python
+Mark Lutz --    python cookbook
+Black Hat Python ---Network programming
+Jason Brownlee --- Machine Learning Mastery with Python
+
+
+
+#!/usr/bin/env python
+chmod 755 filename.py
+
+jetbrain for python IDE
+Komodo_IDE -- python
+
+print(dir())
+
+pylint abc.py
+
+aVar= 'The letter is \N{LATINCAPITAL LETTER WITH OGONEK}'
+\U00000118 
+
+
+
+print(dir(aVra)) ---what this variable is capable of doing
+
+.exrc ----file for unix to set tab
+
+random.org
+
+
+http://freecomputerbooks.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
