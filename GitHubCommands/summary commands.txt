@@ -1,0 +1,39 @@
+set up the git or configure the git bash
+
+git config --global user.name <user_name>
+git config --global user.emaile <email>
+git config --global --list   lists the setting made
+
+============= initialize teh repository=============
+
+step 1: git initi   initializes teh git repor
+step 2 : once the changes are donen in file. use git add <file name> to add teh change in stage for commit
+step 3 : git commit -m / -am "to commit the staged changed to git repo"
+ untill teh changes are added to teh stage, commit wont move teh changes to repo, and only move the last addedd staged change to repo.
+
+note : git rm --cached <file name> : to unstage and untrack by git
+note : git restore <file name> : reverts the un-staged changes to the last commit in teh file
+note : git restore --staged <file name>: to unstage the changes in file. after add but before commit
+
+note :rm can delte file however git rm can delete onlh those file that are tracked by git
+
+frequent commands:
+ls -all
+git status
+cd ./<folder name>
+cd ..  to go one folder up
+cd -   to go to root folder
+clear   to clear teh command line
+vi <file name> to edit a file
+:wq  to save and exit the file
+
+
+
+https://github.com/nitinKumarInfy12/hello-world.git
+
+connect to remote repo:
+
+git remote add <short name> <url>
+git pull <repo short name> <branch_name>
+git push <re[o short name> <branch name>
+
