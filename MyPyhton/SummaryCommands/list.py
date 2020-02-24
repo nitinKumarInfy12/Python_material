@@ -22,6 +22,7 @@ a = x.count(6)
 
 print (len(x))
 
+column_names = [desc[0] for desc in cursor.description] # advanceway of creatign list 
 '''
 insert
 pop
