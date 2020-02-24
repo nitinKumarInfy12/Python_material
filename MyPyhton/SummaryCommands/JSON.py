@@ -53,13 +53,15 @@ import requests, json
 url ='http://api.openweathermap.org/data/2.5/forecast/daily?q=%s&cnt=3' % (location)
 
 response = requests.get(url)
-response.raise_for_status() # error check
+response.status_code   # 200 is teh success code
+response.raise_for_status() # error check, prefered way
 json_str = response.text  # response.text  has teh json string that can be conveted into python dictionary using the json.loads()
 
 # TODO: Load JSON data into a Python variable.
 weatherData = json.loads(json_str)
 
-
+# shortcut to replace 2 lines of code to 1 line response.json() converts teh response object  into python dictionary
+weatherData = response.json()
 ######################################################################################
 stringOfJsonData = '{"name": "Zophie", "isCat": true, "miceCaught": 0,"felineIQ": null}'
 jsonDataAsPythonValue = json.loads(stringOfJsonData)

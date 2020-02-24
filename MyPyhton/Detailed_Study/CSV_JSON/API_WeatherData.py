@@ -26,6 +26,8 @@ json_str = response.text  # response.text  has teh json string that can be conve
 # TODO: Load JSON data into a Python variable.
 weatherData = json.loads(json_str)
 
+# shortcut : use weatherData = response.json() instead json_str = response.text, weatherData = json.loads(json_str) to convert into dict.
+
 print(weatherData)
 
 w = weatherData['list']

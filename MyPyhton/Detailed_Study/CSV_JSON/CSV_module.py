@@ -42,6 +42,13 @@ exampleData[1][1]  # 'Cherries'
 exampleData[6][1]  # 'Strawberries'
 
 
+
+# ============================ another 
+with open(filename) as f:
+    reader = csv.reader(f)
+    header_row = next(reader)  # returns the next line in the file when passed the reader object.
+    print(header_row)
+
 # =======================Reading data from Readre objects in a for loop==================
 for row in exampleData:
     print('Row #' + str(exampleReader.line_num) + ' ' + str(row))
