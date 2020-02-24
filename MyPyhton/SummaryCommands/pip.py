@@ -3,6 +3,9 @@ pip : command line tool for installing python packages, found on python pcakages
 # pip version : open command prompt and run the command
 pip --version
 
+# this command writes a file with the currently installed libraries in teh project
+pip freeze > requirements.txt
+
 # upgrade pip version
 python -m pip install --upgrade pip
 
