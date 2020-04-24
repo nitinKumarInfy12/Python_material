@@ -1,0 +1,279 @@
+========================list==================
+xyz= [1,2,3,4,'nitin']   # declaring a list
+xyz # print the list
+len(xyz) # length of the list
+xyz.append(2) # appends 2 at the last in the list
+xyz.index(3) # gives the index of Element 3
+xyz.count(2) # counts the numbers of element 2 in the list
+xyz.remove(2) # deletes the first element 2 if multiple same name elemenst are in the list
+xyz.reverse() # reverses the order of te elemenst in the list
+xyz.sort() # sorts the elements in the list
+
+========================dictionary================== key has to be unique
+acd = {} # creating an empty dictionary
+abc = {'nitin':123456, 'kumar':23456, 'singh':46458}   # declaring the Dictionary
+abc                                               #Printing the Dictionary
+abc['Chaitrali'] = 345474    # adding one more Key,Value into the Dictionalry
+abc['kumar'] = 123000   # updating the value for key Kumar
+del abc['singh']    # deleting the element 'Singh'
+
+========================tuple==================can`t be changed, elements cannt be updated / deleted/inserted. The whole tuple can de deleted but.
+
+tup1 = () # creating an empty tuple
+tup2 = (1)   # creating a tuple with only 1 elemnt---Comma is neded int his case
+tup3 = (1,)   # creating a tuple with only 1 elemnt with comma
+tup = ('nitin','kumar','singh')    # declaring a tuple
+tup[0]    # giving the element at index 0
+tup[0:2]  #Printing elemnts from index 0 to Index till 2 without including index 2
+tup4 = ('chaitrali','wayangankar',4,5)
+
+Tup5 = (tup4[0],tup[2],tup[1])   # creating tuple with another tuples
+4 in tup5    # 'True' checking if 4 is available in tuple5
+
+# for loop in tuple
+for x in tup4:
+    print(x)
+
+
+#Tuple behaves as a string, so length, concatenate , multiplicatin with same tup is allowed
+len(tup)     # checking the numbers of element in tuple
+tup = tup   # concatinating the tuple
+tup * 3   # same tupper will be repeated 3 times
+
+# list can be converted in tuple
+list = [1,2,3,4,5] # square brackets
+tuple = tuple(list)
+
+print tuple     # square bracket Converted into braces as in Tuples
+
+# tuple unpacking
+# we can ssign the tuple values to variables
+Tup = ('nitin', 'kumar') # creating a tuple
+x,y = tup    # assignig x as Nitin, y as Kumar
+print x
+print y
+
+
+# swap the values
+   #old way
+ temp = x
+ x = y
+ y = temp
+
+# pyhton provides the Tupe unpacking feature
+x,y = y,x
+Print x
+print y
+
+
+========================if else==================
+var  = "nitin kumar"
+
+if "l" in var:
+    print ("l in the ",var)
+elif "q" in var:
+    print ("k is in the ", var)
+else:
+    pass
+
+=====================for loops========================
+for x in range(0,5):
+    print ("Value of X :", x)
+
+
+=====================while loops========================
+var = 1
+
+while (var <=5):
+    print var
+    var = var +1
+    print ("i am in the loop")
+
+print ("exit the loop")
+
+===================================pass, break, continue==============
+
+# break:  it breaks the loop and exits
+var = 1
+
+while (var <=5):
+    print var
+    var = var +1
+    print ("i am in the loop")
+    if var == 4:
+        break
+
+print ("exit the loop")
+
+
+# continue : it skips the folowing line of code in the loop and goes to next iteration
+
+var = 1
+
+while (var <=5):
+    print var
+    var = var +1
+    if var == 4:
+        continue
+    print ("i am in the loop")
+
+print ("exit the loop")
+
+
+
+# pass : do nothing
+
+for x in range(3):
+    pass
+
+print("exit the loop")
+
+
+========================user input and casting =============
+str = input("give name :")
+print("hello :", str)
+
+# casting input to integer
+var = int(input("give name :"))
+print("given number is :", var)
+
+
+==================exceptions===============================
+# basic code
+
+while True:
+	try:
+		x= int(input("provide a number :"))
+		break
+	except ValueError:
+		print ("Enter a valid number")
+
+
+#Advanced Code:
+
+ while True:
+	try:
+		x= int(input("number :"))
+		break
+	except ValueError:
+		print ("number please")
+	except (NameError, IndentationError, TypeError):
+		print ("value")
+
+
+
+=================functions=============================
+# defining a  basic function that accepts a value
+def sum_list(var_list):
+    sum = 0
+    for x in var_list :
+        sum += x
+    print sum
+
+#calling the function
+
+list1 = [1,2,3,4,5]
+sum_list(list1)
+
+# defining a  basic function that accepts/returns a value
+def sum_list(var_list):
+    sum = 0
+    for x in var_list :
+        sum += x
+    #print sum
+    return sum
+
+list1 = [1,2,3,4,5]
+var2 = sum_list(list1)
+print ("var2 :",var2)
+
+
+============opening and reading files============
+f = open("C:\Python27\MyTestFile.txt","r")
+var1 = f.read()
+print var1
+
+# to repoint the pointer at 0 index
+f.seek(0)
+
+# close the file , once the file is closed it cannot be read untill open command is fired
+f.close()
+
+# read one line from the file, reads line
+f.readline()
+
+# use Seek(0) to reset the readlin ecommand to first line
+f.seek(0)
+
+# read all lines from the file
+f.readlines()
+
+file = open("C:\Python27\MyTest1.txt","r")
+x = file.readline()
+print (x)
+x= file.readline()
+print (x)
+file.seek(0)
+x= file.readline()
+print (x)
+file.seek(0)
+x=file.readlines()
+print x
+
+================writing into the file==================
+d =  open("C:\Python27\MyTest.txt","w")
+d.close()
+d =  open("C:\Python27\MyTest.txt","w")
+d.write("my name is nitin kumar \n What is your name")
+d.close()
+
+# or the below comand using "with open"
+with open("C:\Python27\MyTest1.txt","w") as MyFile:
+    MyFile.write("my name is nitin kumar singh.\nWhat is your name ?")
+
+
+==============Copying a file dat into other==============================
+with open("C:\Python27\MyTest1.txt","r") as SourceFile:
+    with open("C:\Python27\MyTest2.txt", "w") as TargetFile:
+
+        # the below 2 line will only copy the first record from source to target file
+        x= SourceFile.readline()
+        TargetFile.write(x)
+
+        # the below 2 line will copy all the records from source to target file
+        for y in SourceFile:
+            TargetFile.write(y)
+
+
+
+=================class=========================================
+# __init__ is the command used for Construct
+
+class Employee:
+
+	Emp_Count = 0
+# Construct
+	def __init__(Self,Name,Salary):
+		Self.Name = Name
+		Self.Salary = Salary
+		Employee.Emp_Count += 1
+# Method
+	def Display_Name(Self):
+		print("Employee name %s, Salary is %s" %(Self.Name, Self.Salary))
+# Method		
+	def give_raise(Self,Percent):
+		Self.Salary += Self.Salary * percent
+# Method
+	def Display_count(Self):
+		print("Nuber of Employee : %d" %Employee.Emp_Count)
+
+
+# Call the clas and its methods
+emp = Employee("nitin",10000)
+emp.give_raise(1.0)
+emp.Display_name()
+emp.Display_Count()
+
+=======================Tkinter==========================================
+# it is used to generate the graphical interface
+
