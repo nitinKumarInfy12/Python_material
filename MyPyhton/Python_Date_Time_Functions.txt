@@ -1,0 +1,20 @@
+#--------------------------- Python Date and Time functions-----------------#
+import datetime as dt
+
+someday = dt.date(209,4,12)  # year, month, day
+
+# need to use str() toconvert to readable format
+str(someday)  # human readable format
+
+someday.year  # return the year from teh date
+someday.month  # return the month from teh date
+someday.day  # return the day from teh date
+
+
+dt.datetime(209,4,12, 8, 13, 57) # year, month, day , hour. minute, seconds
+sometime = str(dt.datetime(209,4,12, 8, 13, 57))
+
+sometime.hour
+sometime.minute
+sometime.second
+
