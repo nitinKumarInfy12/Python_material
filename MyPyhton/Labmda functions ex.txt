@@ -1,0 +1,16 @@
+Excel libraries
+xlrd
+openpyxl
+
+",".join((name) for name in dataframe[Column]) 
+
+dimension_names=[dimensionfordimensionintm1.dimensions.get_all_names()ifnotdimension.startswith('}')]
+
+cubes_with_rules=[cube.nameforcubeincubesifcube.has_rules]
+
+
+f=lambdax:int(x)ifxelse0
+
+cubes_with_cellnumber.sort(key=lambdac:c.numberCells,reverse=True)
+
+

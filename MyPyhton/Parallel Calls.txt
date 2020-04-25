@@ -1,0 +1,16 @@
+Import asyncio
+asyncdefmain():
+loop=asyncio.get_event_loop()
+#ConnecttoTM1
+withTM1Service(**config['SRI-PSQA'])astm1:
+#Fireofdifferentprocessexecutionsthough'run_process'function.
+futures=[loop.run_in_executor(None,Custom_process,tm1,'pRegion'+regions[num])
+fornum
+inrange(1,10)]
+#Awaittheexecutions
+forfutureinfutures:
+awaitfuture
+
+
+loop=asyncio.get_event_loop()
+loop.run_until_complete(main())
