@@ -704,7 +704,7 @@ dataframe_obj.unstack([rowindex2,rowindex1]) # moves these row ndex to column in
 
 dataframe_obj.unstack("RowIndex1", fill_value = 0) # fills with 0 if no value found
 
-# pivot()
+# pivot() ; long to wide
 dataframe_obj.pivot(index = "Column1", columns = "Column2", values = Column3)
 
 # pivot() : as excel pivot
@@ -719,10 +719,15 @@ or
 pd.pivot_table(data = dataframe_obj, values = Column3, index = ["Column1", "Column2"], columns=["column4","column5"]  aggfunc="sum")
 
 
-# melt() : reverse to pivot_table()
-pd.melt(dataframe_obj, id_vars="Column_to_keep")
+# melt() : reverse to pivot_table() : wide to long
+# id_vars : are the columns to keep in the final table
+# value_vars : columns that need to transposed into rows, if not mentioned then allremaining column other than id_vars  will be transposed in rows.
+# var_name : Desired name to the column that has transposed columns as rows
+# value_namme : Desired name to the value column
 
+pd.melt(dataframe_obj, id_vars="Column_to_keep")
 pd.melt(dataframe_obj, id_vars="Column_to_keep", var_name = "Some_Name", value_name = "Some name to Value column")
+pd.melt(dataframe_obj, id_vars="Column_to_keep", value_vars = ["clo1_name","clo2_name"], var_name = "Some_Name", value_name = "Some name to Value column")
 
 
 
